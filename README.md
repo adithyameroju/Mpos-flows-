@@ -6,8 +6,9 @@ After you enable Pages (see below), the app is at:
 
 **https://adithyameroju.github.io/Mpos-flows-/**
 
-1. Repo **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions**.
-2. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually). The first deploy may take 1–2 minutes.
+1. From your machine, push the latest `main` (includes `.github/workflows/deploy-github-pages.yml`). If Cursor couldn’t push workflows, run: `git push origin main` in Terminal (GitHub token needs **workflow** scope).
+2. Repo **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions**.
+3. Open **Actions**, run **Deploy to GitHub Pages** if it didn’t start automatically. First deploy ~1–2 min.
 
 Local dev: `npm install` → `npm run dev` (or `npm run dev:share` for LAN).
 
