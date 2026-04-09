@@ -1,0 +1,373 @@
+.hero {
+  position: relative;
+}
+
+.heroBg {
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-bottom: var(--space-5);
+  background: var(--hero-gradient);
+  color: var(--text-on-hero);
+  border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  corner-shape: var(--ios-corner-shape);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.iconBtn {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--ios-corner-shape);
+  background: var(--hero-icon-bg);
+  color: var(--text-on-hero);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform 100ms ease;
+}
+
+.iconBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring-on-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .iconBtn:hover {
+    background: var(--hero-icon-bg-hover);
+  }
+}
+
+.iconBtn:active {
+  transform: scale(var(--press-scale));
+}
+
+.greetingRow {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+}
+
+.greetingText {
+  flex: 1;
+  min-width: 0;
+}
+
+.nameRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tierPill {
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 5px 10px;
+}
+
+.hi {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.sub {
+  margin: var(--space-2) 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text-on-hero-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.earningsCard {
+  background: var(--hero-card-bg);
+  color: var(--hero-card-text);
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--ios-corner-shape);
+  padding: var(--space-5);
+  box-shadow:
+    var(--shadow-card),
+    0 0 0 1px var(--border-subtle);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-standard);
+}
+
+.earningsTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.earnLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--hero-card-muted);
+  letter-spacing: 0.1px;
+}
+
+.amount {
+  margin: var(--space-2) 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+  color: var(--hero-card-text);
+}
+
+.encash {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 var(--space-5);
+  border: none;
+  border-radius: var(--radius-md);
+  corner-shape: var(--ios-corner-shape);
+  background: var(--purple-600);
+  color: var(--onyx-100);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform 100ms ease;
+}
+
+.encash:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .encash:hover {
+    background: var(--purple-700);
+  }
+}
+
+.encash:active {
+  transform: scale(var(--press-scale));
+}
+
+.statsRow {
+  display: flex;
+  align-items: stretch;
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.statLabel {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--hero-card-muted);
+  letter-spacing: 0.2px;
+}
+
+.statVal {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  font-variant-numeric: tabular-nums;
+  color: var(--hero-card-text);
+}
+
+.statDivider {
+  width: 1px;
+  margin: 0 var(--space-4);
+  background: var(--divider);
+  align-self: stretch;
+}
+
+.tierCard {
+  background: var(--hero-tier-glass);
+  border-radius: var(--radius-xl);
+  corner-shape: var(--ios-corner-shape);
+  padding: var(--space-4);
+  box-shadow: inset 0 0 0 1px var(--hero-tier-glass-border);
+  margin-bottom: var(--space-4);
+}
+
+.tierLabels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  padding: 0 var(--space-1);
+}
+
+.tierMuted {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.tierActive {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.15px;
+  color: var(--text-on-hero);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  corner-shape: var(--ios-corner-shape);
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.85),
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Match Growth “Gold” chip — readable on purple hero */
+.tierActiveGold {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.15px;
+  color: #5c4a1a;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  corner-shape: var(--ios-corner-shape);
+  background: linear-gradient(180deg, #fff4c4 0%, #f5e08a 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(201, 162, 39, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme='dark'] .tierActiveGold {
+  color: #fff4c4;
+  background: linear-gradient(180deg, #6b5a2a 0%, #4a3d18 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(212, 175, 55, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.tierBarWrap {
+  position: relative;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.tierBarTrack {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  corner-shape: var(--ios-corner-shape);
+  background: rgba(255, 255, 255, 0.28);
+  overflow: hidden;
+}
+
+.tierBarFill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  corner-shape: var(--ios-corner-shape);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.95) 100%);
+  transition: width 300ms var(--ease-out-cubic);
+}
+
+.tierMarker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--onyx-100);
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.95),
+    0 6px 16px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.tierHelp {
+  margin: var(--space-4) 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--text-on-hero-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bonusStrip {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: none;
+  font: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  corner-shape: var(--ios-corner-shape);
+  background: rgba(0, 0, 0, 0.14);
+  color: rgba(255, 255, 255, 0.96);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform 100ms ease;
+}
+
+.bonusStrip:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring-on-dark);
+}
+
+.bonusStrip:active {
+  transform: scale(var(--press-scale));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bonusStrip:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

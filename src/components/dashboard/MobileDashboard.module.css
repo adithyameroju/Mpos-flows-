@@ -1,0 +1,51 @@
+.shell {
+  min-height: 100dvh;
+  min-height: 100svh;
+  width: 100%;
+  background: var(--surface-page);
+  position: relative;
+}
+
+.main {
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  min-height: 0;
+  overscroll-behavior-y: none;
+}
+
+/* Full-bleed section stripes below hero (resets inner section margins) */
+.bands {
+  display: flex;
+  flex-direction: column;
+}
+
+.band {
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.band:first-child {
+  padding-top: var(--space-5);
+}
+
+.band:last-child {
+  padding-bottom: var(--space-8);
+}
+
+.bandDefault {
+  background: var(--section-band-default);
+}
+
+.bandMuted {
+  background: var(--section-band-muted);
+}
+
+.bandAccent {
+  background: var(--section-band-accent);
+}
+
+.band :global(section) {
+  margin-top: 0;
+  margin-bottom: 0;
+}

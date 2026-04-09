@@ -1,0 +1,14 @@
+/**
+ * iOS / Figma-style corner smoothing (~100% continuous curve).
+ * Uses CSS `corner-shape: squircle` when supported (e.g. Chromium 139+).
+ * Circular avatars/buttons keep `round`; see MDN: corner-shape.
+ */
+:root {
+  --ios-corner-shape: round;
+}
+
+@supports (corner-shape: squircle) {
+  :root {
+    --ios-corner-shape: squircle;
+  }
+}

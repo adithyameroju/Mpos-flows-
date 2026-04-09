@@ -1,0 +1,31 @@
+.btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--ios-corner-shape);
+  background: var(--hero-icon-bg);
+  color: var(--text-on-hero);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform 100ms ease;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring-on-dark);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--hero-icon-bg-hover);
+  }
+}
+
+.btn:active {
+  transform: scale(var(--press-scale));
+}

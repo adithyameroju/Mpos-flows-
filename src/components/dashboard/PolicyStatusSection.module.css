@@ -1,0 +1,221 @@
+.section {
+  margin-top: var(--space-8);
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.pending {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 156px;
+  padding: var(--space-5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  corner-shape: var(--ios-corner-shape);
+  background: linear-gradient(
+    155deg,
+    var(--metric-pending-bg) 0%,
+    var(--surface-card) 48%,
+    var(--surface-card-muted) 100%
+  );
+  box-shadow: var(--shadow-card);
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    box-shadow var(--transition-standard),
+    transform 100ms ease;
+}
+
+.pending::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(78, 41, 187, 0.12) 0%,
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.pending:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pending:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+.pending:active {
+  transform: scale(var(--press-scale));
+}
+
+.pendingTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.pendingIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  corner-shape: var(--ios-corner-shape);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--metric-pending-bg);
+  color: var(--metric-pending);
+  position: relative;
+  z-index: 1;
+}
+
+.pendingBadge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  corner-shape: var(--ios-corner-shape);
+  background: var(--surface-card);
+  color: var(--metric-pending);
+  box-shadow: var(--shadow-inset-border);
+  position: relative;
+  z-index: 1;
+}
+
+.pendingLabel {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+
+.pendingVal {
+  margin: var(--space-2) 0 0;
+  position: relative;
+  z-index: 1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.6px;
+  font-variant-numeric: tabular-nums;
+  color: var(--metric-pending);
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.smallCard {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  min-height: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--ios-corner-shape);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
+  font-family: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    box-shadow var(--transition-fast),
+    transform 100ms ease;
+}
+
+.smallCard:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .smallCard:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+.smallCard:active {
+  transform: scale(var(--press-scale));
+}
+
+.smallIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  corner-shape: var(--ios-corner-shape);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconProgress {
+  background: var(--metric-progress-bg);
+  color: var(--metric-progress);
+}
+
+.iconReject {
+  background: var(--metric-reject-bg);
+  color: var(--metric-reject);
+}
+
+.smallBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.smallLabel {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.15px;
+  color: var(--text-secondary);
+}
+
+.smallVal {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+.rejected {
+  background: linear-gradient(180deg, var(--metric-reject-bg) 0%, var(--surface-card) 100%);
+}
+
+.rejected .smallVal {
+  color: var(--metric-reject);
+}

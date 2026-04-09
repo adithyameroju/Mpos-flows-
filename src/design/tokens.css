@@ -1,0 +1,97 @@
+/**
+ * ACKO design system tokens — source: acko-design-system skill
+ */
+:root {
+  /* Purple */
+  --purple-800: #18084a;
+  --purple-700: #2e1773;
+  --purple-600: #4e29bb;
+  --purple-500: #926ff3;
+  --purple-400: #b59cf5;
+  --purple-300: #d1c5fa;
+  --purple-200: #ecebff;
+  --purple-100: #f8f7fd;
+
+  /* Onyx */
+  --onyx-800: #0a0a0a;
+  --onyx-700: #121212;
+  --onyx-600: #2f2f2f;
+  --onyx-500: #5d5d5d;
+  --onyx-400: #b0b0b0;
+  --onyx-300: #e7e7e7;
+  --onyx-200: #f6f6f6;
+  --onyx-100: #ffffff;
+
+  /* Cerise */
+  --cerise-800: #4f0826;
+  --cerise-700: #981950;
+  --cerise-600: #d82a7b;
+  --cerise-500: #ec5fab;
+  --cerise-400: #f8a9d6;
+  --cerise-300: #fad0e9;
+  --cerise-200: #fce7f4;
+  --cerise-100: #fdf2f8;
+
+  /* Blue */
+  --blue-800: #004768;
+  --blue-700: #006a97;
+  --blue-600: #009de0;
+  --blue-500: #1eb7e7;
+  --blue-400: #59d8ff;
+  --blue-300: #a1e7fd;
+  --blue-200: #def7ff;
+  --blue-100: #eefaff;
+
+  /* Green */
+  --green-800: #004a19;
+  --green-700: #1c772c;
+  --green-600: #149a40;
+  --green-500: #55b94d;
+  --green-400: #85e37d;
+  --green-300: #b2f2ad;
+  --green-200: #dafad7;
+  --green-100: #f3fff2;
+
+  /* Orange (Sunshade) */
+  --orange-800: #5b2c00;
+  --orange-700: #b15a08;
+  --orange-600: #d97700;
+  --orange-500: #f4a024;
+  --orange-400: #ffc368;
+  --orange-300: #ffd79b;
+  --orange-200: #ffedc5;
+  --orange-100: #fff8e7;
+
+  /* Spacing — 4px base */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Easing */
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* Z-index */
+  --z-sticky: 150;
+  --z-overlay: 200;
+
+  /* Mobile shell — max content column width */
+  --app-max-width: 430px;
+
+  /* Radii — iOS continuous-style (large, soft; pills use full round) */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-pill: 9999px;
+
+  /* Page background — overridden by theme-semantic --surface-page in components */
+  --page-bg: #f0eef5;
+}
