@@ -1,3 +1,18 @@
+# mPOS — partner dashboard (prototype)
+
+## Live demo (GitHub Pages)
+
+After you enable Pages (see below), the app is at:
+
+**https://adithyameroju.github.io/Mpos-flows-/**
+
+1. Repo **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions**.
+2. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually). The first deploy may take 1–2 minutes.
+
+Local dev: `npm install` → `npm run dev` (or `npm run dev:share` for LAN).
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
